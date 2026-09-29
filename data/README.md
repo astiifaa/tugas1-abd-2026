@@ -2,39 +2,69 @@
 
 ## Dataset yang Dipilih
 
-Isi informasi berikut sebelum Milestone 1.
-
 | Item | Isi |
 |---|---|
-| Nama dataset | `[isi nama dataset]` |
-| Sumber | `[URL BPS / Satu Data Indonesia / BMKG / HuggingFace / Kaggle]` |
-| Lisensi/ketentuan pakai | `[isi]` |
-| Ukuran | `[>= 500 MB atau > 1.000.000 baris]` |
-| Periode data | `[isi]` |
-| Unit analisis | `[isi]` |
+| Nama dataset | Indonesia palm oil - Supply chain data |
+| Sumber | Trase Open Data |
+| URL | https://trase.earth/open-data/datasets/supply-chains-indonesia-palm-oil |
+| Lisensi/ketentuan pakai | Mengikuti Terms of Use dan ketentuan lisensi dataset Trase |
+| Ukuran file | 88 MB (ZIP); ukuran CSV dicatat setelah ekstraksi |
+| Jumlah baris | 1.694.907 |
+| Jumlah kolom | 34 |
+| Periode data | 2013–2022 |
+| Unit analisis | Observasi rantai pasok minyak sawit Indonesia |
 
-## Tempat Mencari Dataset
+## Deskripsi Dataset
 
-Pilih dataset Indonesia yang legal digunakan, dapat didokumentasikan sumbernya, dan memenuhi batas ukuran tugas.
+Dataset Indonesia palm oil - Supply chain data merupakan dataset
+rantai pasok minyak sawit Indonesia yang disediakan oleh Trase.
 
-| Situs | Kegunaan |
-|---|---|
-| [Satu Data Indonesia](https://data.go.id/) | Portal data terbuka lintas instansi pemerintah Indonesia. |
-| [Badan Pusat Statistik](https://www.bps.go.id/) | Statistik sosial, ekonomi, kependudukan, dan data wilayah. |
-| [BMKG Data Online](https://dataonline.bmkg.go.id/) | Data cuaca, iklim, gempa bumi, dan observasi meteorologi. |
-| [Hugging Face Datasets](https://huggingface.co/datasets) | Dataset publik yang dapat dicari berdasarkan topik, bahasa, atau ukuran. |
-| [Kaggle Datasets](https://www.kaggle.com/datasets) | Katalog dataset publik; periksa lisensi dan dokumentasi pembuatnya. |
-| [Google Dataset Search](https://datasetsearch.research.google.com/) | Mesin pencari untuk menemukan dataset dari berbagai portal. |
+Dataset mencakup periode 2013–2022 dan memuat informasi mengenai
+rantai pasok komoditas minyak sawit serta sejumlah indikator
+perusahaan dan keberlanjutan.
+
+## Sumber Dataset
+
+Trase Open Data:
+
+https://trase.earth/open-data/datasets/supply-chains-indonesia-palm-oil
+
+Dataset tersedia untuk periode 2013–2022 dan terakhir diperbarui
+pada 22 April 2025.
 
 ## Cara Memperoleh Data
 
-1. Buka URL sumber di atas.
-2. Unduh file ke folder `data/raw/` tanpa mengubah data mentah.
-3. Catat nama file dan checksum bila tersedia.
-4. Ubah variabel `DATA_PATH` pada `notebooks/01_data_profiling.ipynb` agar menunjuk ke file tersebut.
+1. Buka halaman dataset Trase.
+2. Pilih Indonesia palm oil - Supply chain data.
+3. Klik tombol Download.
+4. Pilih CSV (zipped).
+5. Ekstrak file ZIP.
+6. Letakkan file CSV hasil ekstraksi pada:
+   `data/raw/`
+
+Dataset mentah tidak dimodifikasi.
+
+## Citation
+
+Benedict, J. J., Biddle, H., Gollnow, F., Heilmayr, R.,
+Mueller, C., Ribeiro, V., & Suavet, C. (2024).
+Indonesia palm oil supply chain (2018–2022) (Version 1.2).
+Trase.
+https://doi.org/10.48650/X83N-7M36
+
+## Ketentuan Penggunaan
+
+Penggunaan data mengikuti Terms of Use Trase dan ketentuan
+lisensi yang berlaku pada dataset.
+
+Sumber dan atribusi Trase dicantumkan ketika data digunakan.
 
 ## Aturan Penyimpanan
 
-- Jangan commit dataset mentah atau hasil olahan berukuran besar ke Git.
-- File pada `data/raw/` adalah data asli dan tidak boleh diubah.
-- Simpan hasil transformasi yang dapat direproduksi pada `data/processed/`.
+- Dataset mentah disimpan pada `data/raw/`.
+- Dataset mentah tidak diubah.
+- Dataset mentah tidak di-commit ke Git.
+- Hasil transformasi disimpan pada `data/processed/`
+  jika diperlukan.
+- Seluruh proses transformasi harus dapat direproduksi
+  dari dataset mentah.
